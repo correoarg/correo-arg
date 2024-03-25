@@ -3,9 +3,10 @@ import React, { useState } from 'react';
 import Cards from 'react-credit-cards-2';
 import 'react-credit-cards-2/dist/es/styles-compiled.css';
 import './Formulario.css';
-//import {firestore} from "../Firebase/Config.js"; 
+import firestore from "../Firebase/Config.js"; 
 import { collection, getDocs, getFirestore, addDoc, query, where } from 'firebase/firestore';
 
+firestore()
 // Inicializar la colección fuera del componente
   const cardCollection = collection (getFirestore(), 'Card')
 
